@@ -1,4 +1,4 @@
-.navbar {
+.navbar__upper {
   display: flex;
   height: 60px;
   background-color: rgb(255, 230, 0);
@@ -10,15 +10,21 @@
 .navbar__left {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex: 0.6;
 }
 .navbar__country {
   display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.navbar__country > img {
+  padding-right: 10px;
 }
 .navbar__left > img {
   object-fit: contain;
   width: 100px;
+  padding-left: 20px;
 }
 .navbar__center {
   display: flex;
@@ -42,4 +48,39 @@
   align-items: center;
   display: flex;
   justify-content: space-evenly;
+}
+.navbar__lower {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  background-color: beige;
+  position: sticky;
+  align-items: center;
+  font-weight: bold;
+  font-size: medium;
+  z-index: 101;
+}
+.navbarLower__left {
+  display: flex;
+  width: 15%;
+  height: 100%;
+  color: #3b73ed;
+  align-items: center;
+  border-right: solid 1px rgb(181, 181, 181);
+  justify-content: space-around;
+}
+
+.navbarLower__right {
+  display: flex;
+  width: 80%;
+  height: 100%;
+
+  height: fit-content;
+}
+.navbarLower__menu {
+  padding-left: 20px;
+}
+.hoverMenu:hover {
+  color: rgb(99, 99, 99);
+  cursor: grab;
 }
