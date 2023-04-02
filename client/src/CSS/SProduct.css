@@ -1,0 +1,117 @@
+.sproduct {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  height: 85vh;
+}
+.sproduct__image {
+  margin-top: 40px;
+  object-fit: contain;
+  width: 100%;
+  flex: 0.3;
+  box-shadow: 0 4px 8px 0 rgba(206, 206, 206, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.sproduct__description {
+  flex: 0.4;
+  margin-top: 40px;
+  margin-left: 40px;
+  display: flex;
+  padding-right: 40px;
+  flex-direction: column;
+  top: 0;
+  border-right: solid 0.5px rgba(198, 198, 198, 0.511);
+}
+
+.sproduct__policy {
+  flex: 0.3;
+  margin-top: 30px;
+}
+.sproduct__policies {
+  display: flex;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 10px;
+  font-weight: lighter;
+  font-size: smaller;
+  align-items: center;
+  justify-content: start;
+  border-bottom: solid 0.5px rgba(198, 198, 198, 0.511);
+}
+.sproduct__model {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+}
+.sproduct__price {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+}
+.padding10 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.gray {
+  color: gray;
+}
+.sproduct__rating {
+  background-color: yellowgreen;
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-bottom: 4px;
+  margin-left: 10px;
+  border-radius: 15px;
+  max-height: 1rem;
+  font-weight: bold;
+  color: white;
+}
+.sproduct__end {
+  display: flex;
+  margin-top: 10px;
+  width: 100%;
+}
+.sproduct__ad {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.sproduct__button {
+  padding: 10px;
+  margin-left: 15px;
+  width: 100%;
+  color: white;
+  font-weight: bold;
+  border: silver;
+  border-radius: 5px;
+  background-color: rgb(43, 76, 215);
+}
+.sproduct__button:hover {
+  cursor: pointer;
+}
+
+.sproduct__quantity {
+  padding: 10px;
+}
+@media screen and (max-width: 768px) {
+  .sproduct {
+    flex-direction: column;
+  }
+
+  .navbar__right {
+    flex: 1.2;
+    justify-content: flex-end;
+  }
+  .navbar__menu {
+    display: none;
+  }
+  .navbarLower__left {
+    width: 20%;
+  }
+  .navbarLower__right {
+    width: 80%;
+    display: none;
+  }
+}

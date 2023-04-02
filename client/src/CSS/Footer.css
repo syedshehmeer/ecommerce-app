@@ -1,0 +1,81 @@
+.footer {
+  margin-top: 20px;
+  width: 100%;
+}
+.footer__upper {
+  width: 100%;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.footer__upperRight {
+  display: flex;
+}
+.footer__upperLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+.footer__middle {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+  background-color: #f7f7fa;
+}
+.footer__social {
+  display: flex;
+  background-color: rgb(255, 230, 0);
+  height: 30px;
+  width: 30px;
+  margin-top: 5px;
+  border-radius: 100%;
+  justify-content: center;
+  padding: 5px;
+  align-items: center;
+  margin-right: 10px;
+}
+.footer__lower {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  padding-top: 20px;
+  padding-bottom: 80px;
+  background-color: #f2f2f2;
+}
+.footer__lower > p {
+  padding: 10px;
+}
+.footer__lowerPayment {
+  align-items: center;
+  display: flex;
+  padding: 10px;
+}
+.footer__lowerPolicies {
+  padding: 10px;
+}
+.footer__lowerPolicies > ul > li {
+  list-style-type: none;
+  display: inline;
+  margin-left: 15px;
+  font-size: small;
+}
+.payment__card {
+  width: 40px;
+  object-fit: contain;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer__upper {
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+  }
+  .footer__lower {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}

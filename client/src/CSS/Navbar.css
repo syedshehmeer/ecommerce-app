@@ -1,17 +1,19 @@
+.navbar {
+}
 .navbar__upper {
   display: flex;
-  height: 60px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   background-color: rgb(255, 230, 0);
   width: 100%;
+  z-index: 101;
   position: sticky;
-  top: 0;
-  z-index: 100;
 }
 .navbar__left {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex: 0.6;
+  flex: 0.15;
 }
 .navbar__country {
   display: flex;
@@ -21,7 +23,7 @@
 .navbar__country > img {
   padding-right: 10px;
 }
-.navbar__left > img {
+.navbar__logo {
   object-fit: contain;
   width: 100px;
   padding-left: 20px;
@@ -31,16 +33,25 @@
   flex: 2;
   align-items: center;
 }
-.navbar__center > input {
-  width: 100%;
+.navbar__right > input {
+  width: 80%;
   height: 15px;
   padding: 10px;
   border-radius: 5px;
   border: lightgray;
 }
+.navbar__rightMenu {
+  display: flex;
+  padding: 2px;
+  width: 15%;
+  align-items: center;
+  display: inline-flex;
+  justify-items: center;
+  justify-content: space-between;
+}
 .navbar__right {
   display: flex;
-  flex: 0.7;
+  flex: 0.85;
   align-items: center;
   justify-content: space-evenly;
 }
@@ -48,34 +59,32 @@
   align-items: center;
   display: flex;
   justify-content: space-evenly;
+  text-decoration: none;
+  color: unset;
 }
 .navbar__lower {
   display: flex;
   width: 100%;
   height: 40px;
   background-color: beige;
-  position: sticky;
   align-items: center;
   font-weight: bold;
   font-size: medium;
-  z-index: 101;
 }
 .navbarLower__left {
   display: flex;
-  width: 15%;
+  min-width: 15%;
   height: 100%;
   color: #3b73ed;
   align-items: center;
-  border-right: solid 1px rgb(181, 181, 181);
-  justify-content: space-around;
+
+  justify-content: left;
 }
 
 .navbarLower__right {
+  border-left: solid 1px rgb(181, 181, 181);
   display: flex;
   width: 80%;
-  height: 100%;
-
-  height: fit-content;
 }
 .navbarLower__menu {
   padding-left: 20px;
@@ -83,4 +92,37 @@
 .hoverMenu:hover {
   color: rgb(99, 99, 99);
   cursor: grab;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar__upper {
+    flex-direction: column;
+  }
+  .navbar__left {
+    flex: 0.2;
+  }
+  .navbar__center {
+    display: inline;
+  }
+  .navbar__rightMenu {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+  }
+  .navbar__right > input {
+    width: 50%;
+  }
+  /* .navbar__menu {
+    display: none;
+  } */
+  .navbarLower__left {
+    width: 20%;
+  }
+  .navbarLower__right {
+    width: 80%;
+    display: none;
+  }
+  .navbar__country > p {
+    display: none;
+  }
 }

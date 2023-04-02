@@ -1,0 +1,135 @@
+.cart__container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  background-color: #f7f7fa;
+  min-height: 85vh;
+}
+.cart__heading {
+  display: flex;
+  padding: 10px;
+  padding-left: 0;
+  align-items: center;
+}
+.cart__left {
+  padding-left: 60px;
+  width: 60%;
+}
+.cartProduct__card {
+  width: 95%;
+  background-color: white;
+  height: 250px;
+  display: flex;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.cartCard__img {
+  top: 0;
+  align-items: start;
+  object-fit: contain;
+  width: 120px;
+  margin-left: 10px;
+}
+.cartCard__left {
+  width: 17%;
+}
+.cartCard__center {
+  justify-items: right;
+  flex: 2;
+}
+.cartCard__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20%;
+  right: 0;
+}
+
+.cart__ad {
+  width: 95%;
+}
+.cart__right {
+  margin-right: 100px;
+  width: 40%;
+}
+.order {
+  margin-top: 20px;
+  border: solid 0.5px rgba(198, 198, 198, 0.511);
+  padding: 20px;
+  width: 100%;
+}
+.order__coupon {
+  width: 100%;
+  display: flex;
+}
+.order__coupon > input {
+  margin-top: 10px;
+  flex: 1;
+  padding: 10px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: solid 0.5px rgba(198, 198, 198, 0.511);
+}
+.order__coupon > button {
+  margin-top: 10px;
+  padding: 0px 10px;
+  font-weight: bold;
+  background-color: rgb(56, 102, 223);
+  color: white;
+  border: rgb(56, 102, 223);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.order__total {
+  border-top: solid 0.5px rgba(198, 198, 198, 0.511);
+  padding-top: 20px;
+}
+.order__checkout {
+  width: 100%;
+  margin-top: 10px;
+  padding: 15px;
+  font-weight: bolder;
+  background-color: rgb(56, 102, 223);
+  color: white;
+  border: rgb(56, 102, 223);
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .cart__container {
+    flex-direction: column;
+    justify-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+  }
+  .cart__left {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0px;
+  }
+  .cart__right {
+    width: 69.5%;
+    margin-left: 0px;
+    margin-left: 41px;
+    margin-right: auto;
+    padding: 0px;
+  }
+  .cartProduct__card {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+    padding: 10px;
+  }
+  .cartCard__right {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .order {
+    width: 100%;
+  }
+}
