@@ -11,7 +11,10 @@ const Product = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/products");
+        //http://localhost:5000/api/products
+        const response = await axios.get(
+          "https://noonapp.onrender.com/api/products"
+        );
         setProduct(response.data.products);
       } catch (error) {
         console.error(error);

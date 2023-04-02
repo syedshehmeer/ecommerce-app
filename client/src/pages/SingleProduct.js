@@ -16,8 +16,9 @@ const SingleProduct = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        //http://localhost:5000/api/products/
         const response = await axios.get(
-          `http://localhost:5000/api/products/${prodID}`
+          `https://noonapp.onrender.com/api/products/${prodID}`
         );
         setData(response.data.product);
       } catch (error) {
