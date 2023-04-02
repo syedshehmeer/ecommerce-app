@@ -27,7 +27,7 @@ const Product = () => {
     <div>
       <Grid container spacing={2} justifyContent="center" alignItems="center">
         {product.map((prod) => (
-          <Grid item xs={6.5} sm={4} md={2} key={prod._id}>
+          <Grid item xs={8} sm={4} md={2} key={prod._id}>
             <ProductCard prod={prod} />
           </Grid>
         ))}

@@ -56,6 +56,9 @@
 .footer__lowerPolicies {
   padding: 10px;
 }
+.footer__lowerPolicies > ul {
+  padding: 0px;
+}
 .footer__lowerPolicies > ul > li {
   list-style-type: none;
   display: inline;
@@ -74,8 +77,15 @@
     align-items: center;
     justify-items: center;
   }
+  .footer__middle {
+    flex-direction: column;
+  }
   .footer__lower {
     flex-direction: column-reverse;
     align-items: center;
+    justify-items: center;
+  }
+  .footer__lower > ul {
+    padding-left: 0px;
   }
 }

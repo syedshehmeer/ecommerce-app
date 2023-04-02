@@ -52,6 +52,7 @@ export const Footer = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+            marginBottom: "10px",
           }}
         >
           <h6>SHOP ON THE GO</h6>

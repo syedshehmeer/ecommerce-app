@@ -1,6 +1,6 @@
 .product {
   margin-bottom: 3px;
-  margin-right: 10px;
+  /* margin-right: 10px; */
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -64,7 +64,4 @@ a:active {
 }
 
 @media screen and (max-width: 768px) {
-  .navbar__left {
-    flex: 0.8;
-  }
 }
