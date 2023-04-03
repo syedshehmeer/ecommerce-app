@@ -5,8 +5,45 @@ import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import Badge from "@mui/material/Badge";
+import SignIn from "../pages/SignIn";
+import PropTypes from "prop-types";
+import DialogTitle from "@mui/material/DialogTitle";
+import Dialog from "@mui/material/Dialog";
+
+function SimpleDialog(props) {
+  const { onClose, selectedValue, open } = props;
+
+  const handleClose = () => {
+    onClose();
+  };
+
+  const handleListItemClick = (value) => {
+    onClose(value);
+  };
+
+  return (
+    <Dialog onClose={handleClose} open={open}>
+      <SignIn />
+    </Dialog>
+  );
+}
+SimpleDialog.propTypes = {
+  onClose: PropTypes.func.isRequired,
+  open: PropTypes.bool.isRequired,
+};
 
 const Navbar = () => {
+  const [open, setOpen] = React.useState(false);
+  const [selectedValue, setSelectedValue] = React.useState();
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (value) => {
+    setOpen(false);
+    setSelectedValue(value);
+  };
+
   return (
     <div className="navbar">
       <div className="navbar__upper">
@@ -33,12 +70,15 @@ const Navbar = () => {
           <div className="navbar__rightMenu">
             <strong>العربيه</strong>
 
-            <Link to="/signIn" className=" hoverMenu">
-              <div style={{ display: "flex" }}>
-                <strong>Sign In</strong>
-                <PersonOutlineIcon />
-              </div>
-            </Link>
+            <div
+              className="hoverMenu"
+              style={{ display: "flex" }}
+              onClick={handleClickOpen}
+            >
+              <strong>Sign In</strong>
+              <PersonOutlineIcon />
+            </div>
+
             <Link to="/cart">
               <strong>Cart</strong>
               <Badge badgeContent={null} color="primary">
@@ -86,6 +126,11 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+      <SimpleDialog
+        selectedValue={selectedValue}
+        open={open}
+        onClose={handleClose}
+      />
     </div>
   );
 };

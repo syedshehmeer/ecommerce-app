@@ -33,12 +33,16 @@
   flex: 2;
   align-items: center;
 }
+
 .navbar__right > input {
   width: 80%;
   height: 15px;
   padding: 10px;
   border-radius: 5px;
   border: lightgray;
+}
+.navbar__right > input:focus {
+  outline: none;
 }
 .navbar__rightMenu {
   display: flex;

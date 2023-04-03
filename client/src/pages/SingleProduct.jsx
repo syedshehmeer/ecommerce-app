@@ -14,6 +14,7 @@ const SingleProduct = () => {
   }
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const fetchData = async () => {
       try {
         //http://localhost:5000/api/products/
