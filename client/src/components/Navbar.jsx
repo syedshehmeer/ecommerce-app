@@ -9,6 +9,7 @@ import SignIn from "../pages/SignIn";
 import PropTypes from "prop-types";
 import DialogTitle from "@mui/material/DialogTitle";
 import Dialog from "@mui/material/Dialog";
+import { useSelector } from "react-redux";
 
 function SimpleDialog(props) {
   const { onClose, selectedValue, open } = props;
@@ -33,6 +34,7 @@ SimpleDialog.propTypes = {
 };
 
 const Navbar = () => {
+  const quantity = useSelector((state) => state.cart.quantity);
   const [open, setOpen] = React.useState(false);
   const [selectedValue, setSelectedValue] = React.useState();
   const handleClickOpen = () => {
@@ -81,7 +83,7 @@ const Navbar = () => {
 
             <Link to="/cart">
               <strong>Cart</strong>
-              <Badge badgeContent={null} color="primary">
+              <Badge badgeContent={quantity} color="primary">
                 <ShoppingCartOutlinedIcon />
               </Badge>
             </Link>
