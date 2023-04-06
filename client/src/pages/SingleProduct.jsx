@@ -24,7 +24,7 @@ const SingleProduct = () => {
       try {
         //http://localhost:5000/api/products/
         const response = await axios.get(
-          `https://noonapp.onrender.com/api/products/${prodID}`
+          `https://noon1.vercel.app/api/products/${prodID}`
         );
         setProduct(response.data.product);
         isLoading(false);

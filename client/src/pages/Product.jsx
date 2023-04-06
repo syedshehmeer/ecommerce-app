@@ -16,7 +16,7 @@ const Product = () => {
       try {
         //http://localhost:5000/api/products
         const response = await axios.get(
-          "https://noonapp.onrender.com/api/products"
+          "https://noon1.vercel.app/api/products"
         );
 
         setProduct(response.data.products);
