@@ -1,4 +1,4 @@
-.signin {
+.signup {
   display: flex;
   flex-direction: column;
   justify-items: center;
@@ -7,33 +7,34 @@
   margin-left: auto;
   margin-right: auto;
 }
-.signin__title {
+.signup__title {
   margin-top: 50px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.signin__title p:nth-of-type(1) {
+.signup__title p:nth-of-type(1) {
   font-size: x-large;
   margin-bottom: 5px;
 }
-.signin__title p:nth-of-type(2) {
+.signup__title p:nth-of-type(2) {
   font-size: 1rem;
   margin-top: 5px;
 }
-.signin__title p:nth-of-type(3) {
+.signup__title p:nth-of-type(3) {
   margin-bottom: 5px;
   color: rgb(43, 76, 215);
 }
-.signin__inputs {
+.signup__inputs {
   display: flex;
   flex-direction: column;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 40px;
 }
-.signin__input {
+.signup__input {
   margin-top: 3px;
   display: flex;
   flex-direction: column;
@@ -41,27 +42,26 @@
   margin-left: auto;
   margin-right: auto;
 }
-.signin__input > label {
+.signup__input > label {
   font-size: 0.9rem;
   margin-bottom: 10px;
 }
-.signin__input > input {
+.signup__input > input {
   border: none;
   height: 30px;
   font-size: 1.2rem;
   border-bottom: solid 0.5px rgba(198, 198, 198, 0.511);
 }
-
-.signin__input > input:focus {
+.signup__input > input:focus {
   outline: none;
 }
-.signin > p {
+.signup > p {
   margin: 20px 0px;
   font-size: 0.9rem;
   color: rgb(43, 76, 215);
 }
 
-.signin > button {
+.signup > button {
   width: 100%;
   background-color: white;
   color: rgb(43, 76, 215);
@@ -73,7 +73,7 @@
 }
 
 @media screen and (max-width: 450px) {
-  .signin {
+  .signup {
     max-width: 300px;
   }
 }

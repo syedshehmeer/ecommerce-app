@@ -5,11 +5,11 @@ import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import Badge from "@mui/material/Badge";
-import SignIn from "../pages/SignIn";
 import PropTypes from "prop-types";
 import DialogTitle from "@mui/material/DialogTitle";
 import Dialog from "@mui/material/Dialog";
 import { useSelector } from "react-redux";
+import SignInSignUp from "../pages/SignInSignUp";
 
 function SimpleDialog(props) {
   const { onClose, selectedValue, open } = props;
@@ -24,7 +24,7 @@ function SimpleDialog(props) {
 
   return (
     <Dialog onClose={handleClose} open={open}>
-      <SignIn />
+      <SignInSignUp />
     </Dialog>
   );
 }
